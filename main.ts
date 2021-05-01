@@ -1,44 +1,38 @@
 function pacman_links () {
+    basic.showLeds(`
+        # . # # .
+        . # . # #
+        . . # # #
+        . # # # #
+        # . # # .
+        `)
     basic.pause(100)
-    while (!(input.buttonIsPressed(Button.A)) && !(input.buttonIsPressed(Button.B))) {
-        basic.showLeds(`
-            # . # # .
-            . # . # #
-            . . # # #
-            . # # # #
-            # . # # .
-            `)
-        basic.pause(100)
-        basic.showLeds(`
-            . . # # .
-            # # . # #
-            # # # # #
-            # # # # #
-            . . # # .
-            `)
-        basic.pause(100)
-    }
+    basic.showLeds(`
+        . . # # .
+        # # . # #
+        # # # # #
+        # # # # #
+        . . # # .
+        `)
+    basic.pause(100)
 }
 function pacman_rechts () {
+    basic.showLeds(`
+        . # # . #
+        # # . # .
+        # # # . .
+        # # # # .
+        . # # . #
+        `)
     basic.pause(100)
-    while (!(input.buttonIsPressed(Button.A)) && !(input.buttonIsPressed(Button.B))) {
-        basic.showLeds(`
-            . # # . #
-            # # . # .
-            # # # . .
-            # # # # .
-            . # # . #
-            `)
-        basic.pause(100)
-        basic.showLeds(`
-            . # # . .
-            # # . # #
-            # # # # #
-            # # # # #
-            . # # . .
-            `)
-        basic.pause(100)
-    }
+    basic.showLeds(`
+        . # # . .
+        # # . # #
+        # # # # #
+        # # # # #
+        . # # . .
+        `)
+    basic.pause(100)
 }
 function gefressen (num: number) {
     for (let Index = 0; Index <= num; Index++) {
