@@ -41,7 +41,7 @@ function pacman_rechts () {
     }
 }
 function gefressen (num: number) {
-    for (let Index = 0; Index <= num; Index++) {
+    for (let index = 0; index < num; index++) {
         basic.showIcon(IconNames.Heart)
         basic.pause(100)
         basic.showIcon(IconNames.SmallHeart)
