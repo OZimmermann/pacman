@@ -1,53 +1,43 @@
 function pacman_links () {
     basic.pause(100)
     while (!(input.buttonIsPressed(Button.A)) && !(input.buttonIsPressed(Button.B))) {
-        if (!(input.buttonIsPressed(Button.A)) && !(input.buttonIsPressed(Button.B))) {
-            basic.showLeds(`
-                # . # # .
-                . # . # #
-                . . # # #
-                . # # # #
-                # . # # .
-                `)
-        }
+        basic.showLeds(`
+            # . # # .
+            . # . # #
+            . . # # #
+            . # # # #
+            # . # # .
+            `)
         basic.pause(100)
-        if (!(input.buttonIsPressed(Button.A)) && !(input.buttonIsPressed(Button.B))) {
-            basic.showLeds(`
-                . . # # .
-                # # . # #
-                # # # # #
-                # # # # #
-                . . # # .
-                `)
-        }
+        basic.showLeds(`
+            . . # # .
+            # # . # #
+            # # # # #
+            # # # # #
+            . . # # .
+            `)
         basic.pause(100)
     }
 }
 function pacman_rechts () {
     basic.pause(100)
     while (!(input.buttonIsPressed(Button.A)) && !(input.buttonIsPressed(Button.B))) {
-        while (!(input.buttonIsPressed(Button.A)) && !(input.buttonIsPressed(Button.B))) {
-            if (!(input.buttonIsPressed(Button.A)) && !(input.buttonIsPressed(Button.B))) {
-                basic.showLeds(`
-                    . # # . #
-                    # # . # .
-                    # # # . .
-                    # # # # .
-                    . # # . #
-                    `)
-            }
-            basic.pause(100)
-            if (!(input.buttonIsPressed(Button.A)) && !(input.buttonIsPressed(Button.B))) {
-                basic.showLeds(`
-                    . # # . .
-                    # # . # #
-                    # # # # #
-                    # # # # #
-                    . # # . .
-                    `)
-            }
-            basic.pause(100)
-        }
+        basic.showLeds(`
+            . # # . #
+            # # . # .
+            # # # . .
+            # # # # .
+            . # # . #
+            `)
+        basic.pause(100)
+        basic.showLeds(`
+            . # # . .
+            # # . # #
+            # # # # #
+            # # # # #
+            . # # . .
+            `)
+        basic.pause(100)
     }
 }
 function gefressen (num: number) {
