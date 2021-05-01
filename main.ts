@@ -34,8 +34,8 @@ function pacman_rechts () {
         `)
     basic.pause(100)
 }
-function gefressen (num: number) {
-    for (let Index = 0; Index <= num; Index++) {
+function gefressen2 () {
+    for (let index = 0; index < 4; index++) {
         basic.showIcon(IconNames.Heart)
         basic.pause(100)
         basic.showIcon(IconNames.SmallHeart)
@@ -51,6 +51,5 @@ while (true) {
             pacman_rechts()
         }
     }
-    gefressen(4)
     music.playMelody("G B A G C5 B A B ", 274)
 }
