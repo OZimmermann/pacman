@@ -1,53 +1,65 @@
 function pacman_links () {
     basic.pause(100)
     while (!(input.buttonIsPressed(Button.A)) && !(input.buttonIsPressed(Button.B))) {
-        basic.showLeds(`
-            # . # # .
-            . # . # #
-            . . # # #
-            . # # # #
-            # . # # .
-            `)
+        if (!(input.buttonIsPressed(Button.A)) && !(input.buttonIsPressed(Button.B))) {
+            basic.showLeds(`
+                # . # # .
+                . # . # #
+                . . # # #
+                . # # # #
+                # . # # .
+                `)
+        }
         basic.pause(100)
-        basic.showLeds(`
-            . . # # .
-            # # . # #
-            # # # # #
-            # # # # #
-            . . # # .
-            `)
+        if (!(input.buttonIsPressed(Button.A)) && !(input.buttonIsPressed(Button.B))) {
+            basic.showLeds(`
+                . . # # .
+                # # . # #
+                # # # # #
+                # # # # #
+                . . # # .
+                `)
+        }
         basic.pause(100)
     }
 }
 function pacman_rechts () {
     basic.pause(100)
     while (!(input.buttonIsPressed(Button.A)) && !(input.buttonIsPressed(Button.B))) {
-        basic.showLeds(`
-            . # # . #
-            # # . # .
-            # # # . .
-            # # # # .
-            . # # . #
-            `)
-        basic.pause(100)
-        basic.showLeds(`
-            . # # . .
-            # # . # #
-            # # # # #
-            # # # # #
-            . # # . .
-            `)
-        basic.pause(100)
+        while (!(input.buttonIsPressed(Button.A)) && !(input.buttonIsPressed(Button.B))) {
+            if (!(input.buttonIsPressed(Button.A)) && !(input.buttonIsPressed(Button.B))) {
+                basic.showLeds(`
+                    . # # . #
+                    # # . # .
+                    # # # . .
+                    # # # # .
+                    . # # . #
+                    `)
+            }
+            basic.pause(100)
+            if (!(input.buttonIsPressed(Button.A)) && !(input.buttonIsPressed(Button.B))) {
+                basic.showLeds(`
+                    . # # . .
+                    # # . # #
+                    # # # # #
+                    # # # # #
+                    . # # . .
+                    `)
+            }
+            basic.pause(100)
+        }
     }
 }
 function gefressen (num: number) {
-    for (let Index = 0; Index <= num; Index++) {
+    while (Index <= num) {
         basic.showIcon(IconNames.Heart)
         basic.pause(100)
         basic.showIcon(IconNames.SmallHeart)
         basic.pause(100)
+        Index += 1
     }
 }
+let Index = 0
 while (true) {
     while (!(input.buttonIsPressed(Button.AB))) {
         if (input.buttonIsPressed(Button.A)) {
